@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8 // jre1.8.0_73
+targetCompatibility = 1.8
+compileJava.options.encoding = 'windows-1252'
+version = '2.00'
+
+dependencies {
+	compile 'org.codehaus.groovy:groovy-all:2.4.7'
+    testCompile 'junit:junit:4.12'
+}
+
+repositories {
+	mavenCentral()
+}
+
+task fatJar(type: Jar) {
+	manifest.attributes 'Main-Class': 'de.mwvb.ct3.Ct3App'
+	baseName = project.name
+	version = ''
+	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+	with jar
+}
+
+task copyScript(type: Copy) {
+	from 'script.groovy'
+	into 'build/libs'
+}
+
+task zip(type: Zip) {
+	dependsOn fatJar
+	dependsOn copyScript
+	from 'build/libs'
+}
