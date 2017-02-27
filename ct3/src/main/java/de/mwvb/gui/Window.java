@@ -49,6 +49,14 @@ public abstract class Window<CTR> {
 		alert.showAndWait();
 	}
 	
+	public static void alert(Exception e) {
+		String msg = e.getClass().getName() + ": " + e.getMessage();
+		for (int i = 0; i <= 4 && i < e.getStackTrace().length; i++) {
+			msg += "\n   at " + e.getStackTrace()[i].toString();
+		}
+		alert(msg);
+	}
+	
 	public static String getNameVersion() {
 		return APP_NAME + " " + APP_VERSION;
 	}
