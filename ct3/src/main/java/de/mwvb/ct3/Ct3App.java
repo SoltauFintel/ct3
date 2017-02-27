@@ -15,11 +15,13 @@ public class Ct3App extends Application {
 	 */
 	public static void main(String[] args) {
 		Window.APP_NAME = "ct3";
-		Window.APP_VERSION = "2.01";
+		Window.APP_VERSION = "2.02";
+		// v2.02: TODO
 		// v2.01: bugfix "Location not set"
 		// v2.00: successor of jxls_ct 1.x Tool: Generic Clipboard text transformation tool ("ct3")
 		
-		System.out.println(Window.getNameVersion());
+		System.out.print(Window.getNameVersion());
+		System.out.println("  -- https://github.com/SoltauFintel/ct3");
 		if (args.length > 0 && !args[0].trim().isEmpty()) {
 			MainWindow.buttonText = args[0];
 		}
