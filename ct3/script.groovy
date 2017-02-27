@@ -28,8 +28,8 @@ if (text.contains("jx:if") && text.contains("test")) {
 		sel = ""
 	}
 	return "jx:each(items=\"${items}\", var=\"${var}\"${sel}, lastCell=\"\")"
-} 
-		
+}
+
 String getVal(String a, String name) {
 	int o = a.indexOf(name)
 	if (o < 0) return null

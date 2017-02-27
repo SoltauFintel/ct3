@@ -8,5 +8,3 @@
 		<Button fx:id="btnTransform" text="Transform" minWidth="200" onAction="#onTransform"/>
 	</center>
 </BorderPane>
-
- 
