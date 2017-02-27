@@ -18,7 +18,7 @@ public abstract class Window<CTR> {
 	public void show(Stage stage) {
 		Scene scene = new Scene(root());
 		stage.setScene(scene);
-		stage.setTitle(APP_NAME + " " + APP_VERSION);
+		stage.setTitle(getNameVersion());
 		initWindow(stage);
 		stage.show();
 	}
