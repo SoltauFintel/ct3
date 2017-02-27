@@ -5,3 +5,5 @@ If the button is pressed it gets the text from clipboard, executes script.groovy
 By modifying script.groovy this tool can do any text transformation without the need to build the application.
 The Groovy 2.4 script gets the input by the variable called 'text'. The script can do output by throwing exceptions.
 On success the window background becomes green. Otherwise it becomes red and displays the error message.
+
+:arrow_down: ![Download ct3.zip](https://github.com/SoltauFintel/ct3/releases/download/2.01/ct3-2.01.zip)
