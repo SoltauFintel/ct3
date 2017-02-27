@@ -12,6 +12,7 @@ public class Ct3App extends Application {
 		// v2.01: bugfix "Location not set"
 		// v2.00: successor of jxls_ct 1.x Tool: Generic Clipboard text transformation tool ("ct3")
 		
+		System.out.println(Window.getNameVersion());
 		launch(Ct3App.class, new String[] {});
 	}
 

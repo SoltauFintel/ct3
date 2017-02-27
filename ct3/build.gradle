@@ -4,7 +4,7 @@ apply plugin: 'eclipse'
 sourceCompatibility = 1.8 // jre1.8.0_73
 targetCompatibility = 1.8
 compileJava.options.encoding = 'windows-1252'
-version = '2.00'
+version = '2.01'
 
 dependencies {
 	compile 'org.codehaus.groovy:groovy-all:2.4.7'
