@@ -1,6 +1,7 @@
 package de.mwvb.ct3;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 
 public class MainWindowController {
@@ -8,7 +9,13 @@ public class MainWindowController {
 	private boolean lightgreen = true;
 	@FXML
 	private BorderPane ground;
+	@FXML
+	private Button btnTransform;
 	
+	public void setButtonText(String text) {
+		btnTransform.setText(text);
+	}
+
 	@FXML
 	public void onTransform() {
 		try {
