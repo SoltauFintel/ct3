@@ -58,6 +58,8 @@ public abstract class Window<CTR> {
 	}
 	
 	public static String getNameVersion() {
-		return APP_NAME + " " + APP_VERSION;
+		String version = System.getProperty("java.version");
+		if (version == null) version = "";
+		return APP_NAME + " " + APP_VERSION + "/" + version.replace("1.8.0_", "8u");
 	}
 }
